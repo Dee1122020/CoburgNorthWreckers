@@ -1,24 +1,9 @@
-# README
+# North Coburg Wreckers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello, my name is Sarfaraj. 
 
-Things you may want to cover:
+This is my first commercial website that I build. 
+If you want to build your website contact me at sarfaraj.shahjahan@gmail.com.
 
-* Ruby version
+Thank you!
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
