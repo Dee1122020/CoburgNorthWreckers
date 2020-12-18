@@ -1,0 +1,59 @@
+
+
+
+<div class="jumbotron">
+  <h1 class="display-4">
+  <%= @part.part_name %>
+  </h1>
+  <p class="lead">
+    <%= @part.description %>
+  </p>
+
+  <hr class="my-4">
+  
+    <p>
+  <strong>Car type:</strong>
+  <%= @part.car_type %>
+</p>
+
+<p>
+  <strong>Car make:</strong>
+  <%= @part.car_make %>
+</p>
+
+<p>
+  <strong>Car model:</strong>
+  <%= @part.car_model %>
+</p>
+
+<p>
+  <strong>Part:</strong>
+  <%= @part.part_id %>
+</p>
+
+
+<p>
+  <strong>Price:</strong>
+  <%= @part.price %>
+</p>
+
+<p>
+  
+  <%= image_tag @part.image, style: "width: 200px; display: block" %>
+</p>
+
+<br/>
+
+<%= link_to 'Update Part', edit_part_path(@part), class:"btn btn-primary" %>
+<%= link_to 'Delete', @part, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
+<br/><br/> 
+<%= link_to 'Back', parts_path, class:"btn btn-secondary" %>
+
+</div>
+
+
+
+
+
+
+

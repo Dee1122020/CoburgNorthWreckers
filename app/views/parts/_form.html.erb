@@ -1,0 +1,61 @@
+<%= form_with(model: part, local: true) do |form| %>
+  <% if part.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(part.errors.count, "error") %> prohibited this part from being saved:</h2>
+
+      <ul>
+        <% part.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :part_name %>
+    <%= form.text_field :part_name, class:"form-control col-5" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :car_type %>
+    <%= form.text_field :car_type, class:"form-control col-5" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :car_make %>
+    <%= form.text_field :car_make, class:"form-control col-5" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :car_model %>
+    <%= form.text_field :car_model, class:"form-control col-5" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :part_id %>
+    <%= form.text_field :part_id, class:"form-control col-5"%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class:"form-control col-5" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :price %>
+    <%= form.text_field :price, class:"form-control col-5" %>
+  </div>
+
+  <div class="form-group">
+    <% if part.image.attached? %>
+    <%= image_tag part.image, style: "width: 200px; display: block" %>
+    <% end %>
+
+    <%= form.label :image %>
+    <%= form.file_field :image, class:"form-control col-5" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>Part name</th>
+      <th>Car type</th>
+      <th>Car make</th>
+      <th>Car model</th>
+      <th>Part</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parts.each do |part| %>
+      <tr>
+        <td><%= link_to part.part_name, part %></td>
+        <td><%= part.car_type %></td>
+        <td><%= part.car_make %></td>
+        <td><%= part.car_model %></td>
+        <td><%= part.part_id %></td>
+        <td><%= part.description %></td>
+        <td><%= part.price %></td>
+        
+        <td><%= link_to 'Update Part', edit_part_path(part), class:"btn btn-outline-primary btn-sm" %></td>
+        <td><%= link_to 'Delete', part, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger btn-sm" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

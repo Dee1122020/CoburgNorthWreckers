@@ -1,0 +1,10 @@
+<h1>Update Part</h1>
+<br/>
+<%= render 'form', part: @part %>
+<br/>
+
+<%= link_to 'Show', @part, class:"btn btn-primary" %>
+<%= link_to 'Delete', @part, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
+<br/><br/>
+
+<%= link_to 'Cancel', parts_path, class:"btn btn-secondary" %>
